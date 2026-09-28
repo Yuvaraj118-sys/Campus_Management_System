@@ -3,7 +3,7 @@ package com.campus.model;
 public class ScholarshipStudent extends Student {
     private double scholarshipPercentage;
 
-    public ScholarshipStudent(int studentid, String studentname, int age, String department, int[] marks, double scholarshipPercentage) {
+    public ScholarshipStudent(int studentid, String studentname, int age, String department, int[] marks) {
         super(studentid, studentname, age, department, marks);
         this.scholarshipPercentage = scholarshipPercentage;
     }
@@ -29,5 +29,13 @@ public class ScholarshipStudent extends Student {
     @Override
     public void displayStudentInfo(boolean showMarks){
         super.displayStudentInfo(showMarks);
+    }
+    @Override
+    public void generatereport() {
+        System.out.println("Scholarship Student Report card");
+    }
+    @Override
+    public void eligibleForScholarship() {
+        System.out.println("Eligible For Scholarship");
     }
 }
